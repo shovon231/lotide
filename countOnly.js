@@ -14,7 +14,7 @@ const assertEqual = function (actual, expected) {
 const countOnly = function (allIteams, itemsToCount) {
   const results = {};
   for (const item of allIteams) {
-    console.log(item);
+    //console.log(item);
     if (itemsToCount[item]) {
       if (results[item]) {
         results[item] += 1;
