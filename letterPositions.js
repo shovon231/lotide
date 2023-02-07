@@ -5,7 +5,7 @@ const letterPositions = function (sentence) {
   for (let index in str) {
     const letter = str[index];
     if (results[letter]) {
-      console.log([index]);
+      //console.log([index]);
       results[letter].push(index);
     } else {
       results[letter] = [index];
