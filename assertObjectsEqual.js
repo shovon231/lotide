@@ -67,3 +67,16 @@ const anotherShirtObject = { size: "medium" };
 //eqObjects(shirtObject, anotherShirtObject); // => true
 
 assertObjectsEqual(shirtObject, anotherShirtObject);
+
+const myFn = function() {
+  console.log("I am function.");
+}
+
+myFn.someAttribute = 42;
+console.log(myFn.someAttribute);
+
+function runner(f) {
+  f();
+}
+
+runner(myFn);
