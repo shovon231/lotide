@@ -4,14 +4,14 @@ const middle = require("./middle");
 const eqArrays = require("./eqArrays");
 const assertEqual = require("./assertEqual");
 const assertArrayEqual = require("./assertArraysEqual");
-const assertObjectEqual = require("./assertObjectsEqual");
+//const assertObjectsEqual = require("./assertObjectsEqual");
 
 module.exports = {
-  head: head,
-  tail: tail,
-  middle: middle,
-  eqArrays: eqArrays,
-  assertEqual: assertEqual,
-  assertArrayEqual: assertArrayEqual,
-  assertObjectEqual: assertObjectEqual,
+  head,
+  tail,
+  middle,
+  eqArrays,
+  assertEqual,
+  assertArrayEqual,
+  //assertObjectsEqual,
 };
