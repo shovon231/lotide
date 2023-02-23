@@ -1,39 +1,5 @@
-// Returns true if both objects have identical keys with identical values.
-// Otherwise you get back a big fat false!
-//function assertEqual
-const assertEqual = function (actual, expected) {
-  console.log(
-    actual === expected
-      ? `${String.fromCodePoint(
-          128512
-        )} Assertion Passed: ${actual}===${expected}`
-      : `${String.fromCodePoint(
-          0x1f621
-        )}Assertion Failed : ${actual} !== ${expected}`
-  );
-};
-//function eqArrays
-const eqArrays = function (arr1, arr2) {
-  if (arr1.length === arr2.length) {
-    for (let i = 0; i <= arr1.length - 1; i++) {
-      if (Array.isArray(arr1[i]) && Array.isArray(arr2[i])) {
-        if (arr1[i].length !== arr2[i].length) {
-          return false;
-        }
-        eqArrays(arr1[i], arr2[i]);
-      } else if (Array.isArray(arr1[i]) || Array.isArray(arr2[i])) {
-        return false;
-      } else {
-        if (arr1[i] !== arr2[i]) {
-          return false;
-        }
-      }
-    }
-    return true;
-  }
-  return false;
-};
-//function eqObject
+const eqArrays = require("./eqArrays");
+
 const eqObjects = function (object1, object2) {
   let firstObjKey = Object.keys(object1);
   let secondObjkey = Object.keys(object2);
@@ -71,7 +37,5 @@ const eqObjects = function (object1, object2) {
   }
 };
 
-console.log(eqObjects({ a: { z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 })); // => true
+module.exports = eqObjects;
 
-console.log(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 })); // => false
-console.log(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: 1, b: 2 })); // => false

@@ -11,4 +11,4 @@ const reverseFunc = function (inputArg) {
   return result;
 };
 
-console.log(reverseFunc(inputArg));
+module.exports = reverseFunc;
